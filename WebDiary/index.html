@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Site</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Web Diary ✨</h1>
+
+    <div id="entries">
+
+    </div>
+
+    <form id="entryForm">
+      <textarea placeholder="What's new?" required></textarea>
+
+      <div id="authSection" style="display: none;">
+        <h2>Author</h2>
+          <input type="email" id="authorEmail" placeholder="Email">
+            <input type="password" id="authorPassword" placeholder="password">
+          <button id="signInBtn">Log in</button>
+          <button id="signOutBtn" style="display: none;">Log out</button>
+            <p id="authStatus"></p>
+      </div>
+
+      <div class="file-input">
+        <label for="imageInput" class="file-label">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7m4 0h6m-6 6h6m-6-6v6m-6 6h.01"></path>
+          </svg>
+          <span>Attach photo</span>
+        </label>
+        <input type="file" id="imageInput" accept="image/*">
+        <span id="fileStatus">File not selected</span>
+      </div>
+
+      <button type="submit">Add a post</button>
+    </form>
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-database-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-auth-compat.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
